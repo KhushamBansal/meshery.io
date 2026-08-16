@@ -88,13 +88,13 @@
         if (localStorage.getItem("mode") === "light-mode") {
           body.classList.remove("dark-mode");
     
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => e.src = e.dataset.logoForLight);
         }
     
         // Automatically set logos based on initial theme
-        window.addEventListener('load', () => {
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+        document.addEventListener('DOMContentLoaded', () => {
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => {
             e.src = body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
           });
@@ -316,7 +316,7 @@
 						<div  class="sub-nav-li" >
 								<img class="nav-img" src="/assets/images/nav-icons/Discuss.svg
 ">
-							<a href="/community#discussion-forums
+							<a href="https://discuss.meshery.io
 " 
 							class="subnav-item">Discussion forums
 							
@@ -485,8 +485,6 @@
       </button>
     </div>
   </header>
-  </body>
-</html>
 
 
 <div class="content">
@@ -635,7 +633,7 @@
 
 <!-- Checkout [Meshery’s roadmap](https://github.com/meshery/meshery/blob/master/ROADMAP.md) to peek into what’s yet to come. -->
 
-<p>We are already hard at work on <a href="/community#discussion-forums/t/meshery-v0-9-roadmap/6296">v0.9.0 Roadmap</a>! See <a href="https://github.com/meshery/meshery/milestone/6">v0.9.0 Milestone</a> in <code class="language-plaintext highlighter-rouge">meshery/meshery</code> for more details and the <a href="https://docs.google.com/presentation/d/1SQMfyu5shjpGKlYONdVzOtd7UYTgLWBcgUvHMLCZ2tY/edit#">Meshery Architecture deck</a> for additional visual designs and functional specifications. Stay tuned for more updates.</p>
+<p>We are already hard at work on <a href="https://discuss.meshery.io/t/meshery-v0-9-roadmap/6296">v0.9.0 Roadmap</a>! See <a href="https://github.com/meshery/meshery/milestone/6">v0.9.0 Milestone</a> in <code class="language-plaintext highlighter-rouge">meshery/meshery</code> for more details and the <a href="https://docs.google.com/presentation/d/1SQMfyu5shjpGKlYONdVzOtd7UYTgLWBcgUvHMLCZ2tY/edit#">Meshery Architecture deck</a> for additional visual designs and functional specifications. Stay tuned for more updates.</p>
 
 <ul>
   <li><strong>Adapters &amp; Performance Management:</strong>  Evolving <code class="language-plaintext highlighter-rouge">meshes.proto</code> to <code class="language-plaintext highlighter-rouge">adapters.proto</code> and externalizing Nighthawk for improved performance testing.</li>
@@ -675,7 +673,7 @@
   
 </details>
 
-<p><strong>Dive deeper into the details and explore the full list of changes in the <a href="https://docs.meshery.io/docs/project/releases">Meshery Documentation</a>. Stay tuned for updates on <a href="/community#discussion-forums/t/meshery-v0-9-roadmap/6296">v0.9.0</a>!</strong></p>
+<p><strong>Dive deeper into the details and explore the full list of changes in the <a href="https://docs.meshery.io/docs/project/releases">Meshery Documentation</a>. Stay tuned for updates on <a href="https://discuss.meshery.io/t/meshery-v0-9-roadmap/6296">v0.9.0</a>!</strong></p>
 
 <p>Try v0.8.0 in the <a href="https://play.meshery.io">Meshery Playground</a> or <a href="https://docs.meshery.io/installation">download</a> the latest release to get started. We look forward to your feedback and contributions!</p>
 
@@ -904,7 +902,7 @@
 						Internships</a></li>
 				
 				<li><a target="_blank" 
-						href="/community#discussion-forums
+						href="https://discuss.meshery.io
 " class="forum-icon" >
 						
 						
@@ -1200,18 +1198,23 @@
 	const currentMode = localStorage.getItem("mode");
 	if (isDark ^ (currentMode === "dark-mode")) {
 		setMode();
+	} else {
+		// Body already matches the stored theme, so setMode() is not called here.
+		// Sync every theme-aware logo to the current theme so logos that render
+		// after the header script (such as #l5-logo) show the correct image on
+		// load instead of waiting for a manual toggle.
+		document.querySelectorAll("#logo-dark-light, .logo-dark-light").forEach(e => {
+			e.src = document.body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
+		});
 	}
 
 	function setMode() {
 		document.body.classList.toggle("dark-mode")
 		
-		let l5Logos = document.querySelectorAll("#l5-logo");
-		let allLogos = document.querySelectorAll("#logo-dark-light");
+		let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
 		if (document.body.classList.contains("dark-mode")) {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/dark-mode-logo.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForDark)
 		} else {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/no-trim.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForLight)
 		}
 		if (document.body.classList.contains("dark-mode")) {
@@ -1231,7 +1234,8 @@
 <script>
   $(document).ready(function () {
     $('.slider').slick({
-
+      centerMode: true,
+      centerPadding: '0px',
       dots: false,
       arrows: false,
       infinite: true,
@@ -1246,25 +1250,25 @@
         {
           breakpoint: 1300,
           settings: {
-            slidesToShow: 2.5,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 1200,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 1.5,
+            slidesToShow: 2,
             slidesToScroll: 1,
           }
         },
@@ -1280,7 +1284,8 @@
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            centerMode: false
           }
         },
         {
@@ -1288,7 +1293,8 @@
           settings: {
             slidesToShow: 1,
             adaptiveWidth: true,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            centerMode: false
           }
         },
         {
@@ -1297,6 +1303,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveWidth: true,
+            centerMode: false
           }
         },
         {
@@ -1305,6 +1312,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveWidth: true,
+            centerMode: false
           }
         }
       ]

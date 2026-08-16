@@ -90,13 +90,13 @@
         if (localStorage.getItem("mode") === "light-mode") {
           body.classList.remove("dark-mode");
     
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => e.src = e.dataset.logoForLight);
         }
     
         // Automatically set logos based on initial theme
-        window.addEventListener('load', () => {
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+        document.addEventListener('DOMContentLoaded', () => {
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => {
             e.src = body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
           });
@@ -318,7 +318,7 @@
 						<div  class="sub-nav-li" >
 								<img class="nav-img" src="/assets/images/nav-icons/Discuss.svg
 ">
-							<a href="/community#discussion-forums
+							<a href="https://discuss.meshery.io
 " 
 							class="subnav-item">Discussion forums
 							
@@ -487,8 +487,6 @@
       </button>
     </div>
   </header>
-  </body>
-</html>
 
 
 <!-- 1. Add latest jQuery and fancybox files -->
@@ -1654,6 +1652,49 @@
    
             
               MESHERY419d
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="Hello_Wasm_config" type="deployment"
+                patternType="designs"
+                technology='["dapr"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/hello-wasm-config-109bc209-677b-461b-a580-e049bb83ce65.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">Hello_Wasm_config</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/109bc209-677b-461b-a580-e049bb83ce65-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/109bc209-677b-461b-a580-e049bb83ce65-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/109bc209-677b-461b-a580-e049bb83ce65-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId109bc209-677b-461b-a580-e049bb83ce65" class="pat">
+            
+            
+   
+            
+              MESHERY461b
             
           </span>
         </h6>
@@ -3331,6 +3372,49 @@
    
             
               MESHERY4f4c
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="NGINX Demo" type="deployment"
+                patternType="designs"
+                technology='["kubernetes"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/nginx-demo-31609ad4-0d41-4a06-9a65-bc8a7304f9b3.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">NGINX Demo</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/31609ad4-0d41-4a06-9a65-bc8a7304f9b3-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/31609ad4-0d41-4a06-9a65-bc8a7304f9b3-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/31609ad4-0d41-4a06-9a65-bc8a7304f9b3-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId31609ad4-0d41-4a06-9a65-bc8a7304f9b3" class="pat">
+            
+            
+   
+            
+              MESHERY4a06
             
           </span>
         </h6>
@@ -5309,6 +5393,49 @@
    
             
               MESHERY4df1
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="DigitalOcean Icons Showcase" type="deployment"
+                patternType="designs"
+                technology='["digitalocean-icons"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/digitalocean-icons-showcase-574aecfa-2aa4-4a8e-b88a-cc8397734f33.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">DigitalOcean Icons Showcase</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/574aecfa-2aa4-4a8e-b88a-cc8397734f33-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/574aecfa-2aa4-4a8e-b88a-cc8397734f33-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/574aecfa-2aa4-4a8e-b88a-cc8397734f33-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patId574aecfa-2aa4-4a8e-b88a-cc8397734f33" class="pat">
+            
+            
+   
+            
+              MESHERY4a8e
             
           </span>
         </h6>
@@ -9007,6 +9134,49 @@
    
             
               MESHERY473d
+            
+          </span>
+        </h6>
+      </div> 
+      <div class="back">
+        
+      </div>
+    </div>
+  </div>  
+</a>
+
+        </div>
+           
+                <div class="column column-lg patternCard designs responsive-card" filter="config.yaml" type="deployment"
+                patternType="designs"
+                technology='["aws-cloudtrail-controller"]' status=""
+                style="display: none;">
+                
+
+<a href="/catalog/deployment/config-yaml-b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d.html">
+<div class= "card link">  
+    <div class="card-inner">
+      <div class="front">
+        <div class="chip" style=" background-color: var(--brand-color-primary);">
+          <small class="pattern-type"> DEPLOYMENT</small>
+        </div>
+        <h4 class="pattern-name">config.yaml</h4>
+        <div class="pattern-image-container">
+          <img class= "pattern-image" 
+          data-snapshot-light="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d-light.png"
+          data-snapshot-dark="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d-light.png"
+          src="https://raw.githubusercontent.com/meshery-extensions/meshery-extensions-packages/master/action-assets/design-assets/b95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d-light.png"
+          onerror="this.src='/assets/images/logos/service-mesh-pattern.svg'; this.style.width = '40%'"
+          loading="lazy"/>
+        </div>
+        <h6 class="pattern-id">
+          
+          <span id="patIdb95f6d26-e5ed-43c9-93a8-1fa15bdbfa4d" class="pat">
+            
+            
+   
+            
+              MESHERY43c9
             
           </span>
         </h6>
@@ -16351,7 +16521,7 @@
     <p class="small">Watch community meeting recordings on our YouTube channel</p>
     <div class="go-corner"></div>
   </a>
-   <a class="card" href="/community#discussion-forums" target="_blank">
+   <a class="card" href="https://discuss.meshery.io" target="_blank">
     <h3>Join the Conversation</h3>
     <p class="small">Ask questions, find answers and share knowledge on our Discussion Forum</p>
     <div class="go-corner"></div>
@@ -16867,8 +17037,7 @@ mesheryctl system start"
       </div>
 
       <hr />
-      <hr />
-      
+          
       <div class="login" style="display: inline-flex; line-height: 40px; ">
         <h1 class="step-number" style="margin-right: 0.5rem">02</h1>
         <h2 class="step-heading">Manage your Cloud Native Infra</h2>
@@ -16885,26 +17054,24 @@ mesheryctl system start"
   <h2>Hear what other users have to say...</h2>
   <div class="slider">
     
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-three-quote">
-          <div class="type-three-quote-qmark">&#10078;</div>
-          <div class="type-three-quote-base">
-            <blockquote class="type-three-quote-text">Meshery is what the next-generation Operations tooling will look like.</blockquote>
-            <div class="type-three-quote-meta">
-              <div class="type-three-quote-userpic"><img src="/assets/images/photos/louie-corbo.jpeg" alt="testimonial image"></div>
-              <div class="type-three-quote-meta-info">
-                <div class="type-three-quote-author"><cite>Louie Corbo</cite></div>
-                <div class="type-three-quote-source"><span>Staff Cloud Infratructure Engineer at SADA</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/photos/louie-corbo.jpeg" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">Meshery is what the next-generation Operations tooling will look like.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Louie Corbo</cite></div>
+                <div class="type-one-source"><span>Staff Cloud Infratructure Engineer at SADA</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    
     
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
@@ -16925,21 +17092,18 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-two-quote">
-          <div class="type-two-quote-pattern">
-            <div class="type-two-quote-qmark">&#10077;</div>
-          </div>
-          <div class="type-two-quote-userpic"><img src="/assets/images/people/otto-van-der-schaaf.webp" alt="testimonial image"></div>
-          <div class="type-two-quote-base">
-            <blockquote class="type-two-quote-text">The precision by which performance measurements are generated and analyzed is a pinnacle focus of Nighthawk. Mesh performance characterization should be distilled from a set of value measurements, and that is where MeshMark compliments to create the ultimate comprehensive efficiency calculation.</blockquote>
-            <div class="type-two-quote-meta">
-              <div class="type-two-quote-meta-info">
-                <div class="type-two-quote-author"><cite>Otto Van Der Schaaf</cite></div>
-                <div class="type-two-quote-source"><span>Principal Engineer at Red Hat</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/otto-van-der-schaaf.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">The precision by which performance measurements are generated and analyzed is a pinnacle focus of Nighthawk. Mesh performance characterization should be distilled from a set of value measurements, and that is where MeshMark compliments to create the ultimate comprehensive efficiency calculation.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Otto Van Der Schaaf</cite></div>
+                <div class="type-one-source"><span>Principal Engineer at Red Hat</span></div>
               </div>
             </div>
           </div>
@@ -16947,21 +17111,18 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-two-quote">
-          <div class="type-two-quote-pattern">
-            <div class="type-two-quote-qmark">&#10077;</div>
-          </div>
-          <div class="type-two-quote-userpic"><img src="/assets/images/people/nic-jackson.webp" alt="testimonial image"></div>
-          <div class="type-two-quote-base">
-            <blockquote class="type-two-quote-text">Meshery is the perfect tool for ensuring that your cloud native applications are optimally configured and performing well; it also gives you a fantastic visual insight into what can be a large amount of textual configuration.</blockquote>
-            <div class="type-two-quote-meta">
-              <div class="type-two-quote-meta-info">
-                <div class="type-two-quote-author"><cite>Nic Jackson</cite></div>
-                <div class="type-two-quote-source"><span>Principal Developer Advocate at HashiCorp</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/nic-jackson.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">Meshery is the perfect tool for ensuring that your cloud native applications are optimally configured and performing well; it also gives you a fantastic visual insight into what can be a large amount of textual configuration.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Nic Jackson</cite></div>
+                <div class="type-one-source"><span>Principal Developer Advocate at HashiCorp</span></div>
               </div>
             </div>
           </div>
@@ -16969,19 +17130,18 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-three-quote">
-          <div class="type-three-quote-qmark">&#10078;</div>
-          <div class="type-three-quote-base">
-            <blockquote class="type-three-quote-text">While speed is one of Linkerd's core competitive advantages, Linkerd provides much more than just an ultrafast data plane. We are pleased to support MeshMark's establishment of a higher order set of functional considerations that incorporate value into the performance equation.</blockquote>
-            <div class="type-three-quote-meta">
-              <div class="type-three-quote-userpic"><img src="/assets/images/people/william-morgan.webp" alt="testimonial image"></div>
-              <div class="type-three-quote-meta-info">
-                <div class="type-three-quote-author"><cite>William Morgan</cite></div>
-                <div class="type-three-quote-source"><span>CEO of Buoyant and one of the creators of Linkerd</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/william-morgan.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">While speed is one of Linkerd's core competitive advantages, Linkerd provides much more than just an ultrafast data plane. We are pleased to support MeshMark's establishment of a higher order set of functional considerations that incorporate value into the performance equation.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>William Morgan</cite></div>
+                <div class="type-one-source"><span>CEO of Buoyant and one of the creators of Linkerd</span></div>
               </div>
             </div>
           </div>
@@ -16989,29 +17149,24 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-two-quote">
-          <div class="type-two-quote-pattern">
-            <div class="type-two-quote-qmark">&#10077;</div>
-          </div>
-          <div class="type-two-quote-userpic"><img src="/assets/images/people/ken-owens.webp" alt="testimonial image"></div>
-          <div class="type-two-quote-base">
-            <blockquote class="type-two-quote-text">Performance measurement data rarely provides a clear and simple picture of how well our applications are performing from a business point of view, which are so often the key efficiency indicators that we really need.</blockquote>
-            <div class="type-two-quote-meta">
-              <div class="type-two-quote-meta-info">
-                <div class="type-two-quote-author"><cite>Ken Owens</cite></div>
-                <div class="type-two-quote-source"><span>Vice President Cyber Cloud Security Engineering at Fiserv</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/ken-owens.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">Performance measurement data rarely provides a clear and simple picture of how well our applications are performing from a business point of view, which are so often the key efficiency indicators that we really need.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Ken Owens</cite></div>
+                <div class="type-one-source"><span>Vice President Cyber Cloud Security Engineering at Fiserv</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    
     
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
@@ -17032,27 +17187,24 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-three-quote">
-          <div class="type-three-quote-qmark">&#10078;</div>
-          <div class="type-three-quote-base">
-            <blockquote class="type-three-quote-text">The fact that Meshery automatically renders our Kubernetes configuration is a game-changer for our team.</blockquote>
-            <div class="type-three-quote-meta">
-              <div class="type-three-quote-userpic"><img src="/assets/images/people/kaur-kallas.webp" alt="testimonial image"></div>
-              <div class="type-three-quote-meta-info">
-                <div class="type-three-quote-author"><cite>Kaur Kallas</cite></div>
-                <div class="type-three-quote-source"><span>Software Architect at Entigo</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/kaur-kallas.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">The fact that Meshery automatically renders our Kubernetes configuration is a game-changer for our team.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Kaur Kallas</cite></div>
+                <div class="type-one-source"><span>Software Architect at Entigo</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    
     
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
@@ -17073,8 +17225,6 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
         <div class="bq-quote type-one-quote">
@@ -17094,21 +17244,18 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-two-quote">
-          <div class="type-two-quote-pattern">
-            <div class="type-two-quote-qmark">&#10077;</div>
-          </div>
-          <div class="type-two-quote-userpic"><img src="/assets/images/people/Maximiliano-Churichi.webp" alt="testimonial image"></div>
-          <div class="type-two-quote-base">
-            <blockquote class="type-two-quote-text">With a goal to bring workload identity and attestation to all cloud-native infrastructure, HPE Security Engineering uses the Meshery Docker Extension to deploy their preferred cloud-native infrastructure and test the performance of our SPIFFE and SPIRE-based identity solution.</blockquote>
-            <div class="type-two-quote-meta">
-              <div class="type-two-quote-meta-info">
-                <div class="type-two-quote-author"><cite>Maximiliano Churichi</cite></div>
-                <div class="type-two-quote-source"><span>Software Engineer at HPE</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/Maximiliano-Churichi.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">With a goal to bring workload identity and attestation to all cloud-native infrastructure, HPE Security Engineering uses the Meshery Docker Extension to deploy their preferred cloud-native infrastructure and test the performance of our SPIFFE and SPIRE-based identity solution.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Maximiliano Churichi</cite></div>
+                <div class="type-one-source"><span>Software Engineer at HPE</span></div>
               </div>
             </div>
           </div>
@@ -17116,27 +17263,24 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-three-quote">
-          <div class="type-three-quote-qmark">&#10078;</div>
-          <div class="type-three-quote-base">
-            <blockquote class="type-three-quote-text">The Meshery Docker Extension offers an easy button to go from Docker Compose to Kubernetes to managing cloud-native applications.</blockquote>
-            <div class="type-three-quote-meta">
-              <div class="type-three-quote-userpic"><img src="/assets/images/people/nic-jackson.webp" alt="testimonial image"></div>
-              <div class="type-three-quote-meta-info">
-                <div class="type-three-quote-author"><cite>Nic Jackson</cite></div>
-                <div class="type-three-quote-source"><span>Principal Developer Advocate at HashiCorp</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/nic-jackson.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">The Meshery Docker Extension offers an easy button to go from Docker Compose to Kubernetes to managing cloud-native applications.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Nic Jackson</cite></div>
+                <div class="type-one-source"><span>Principal Developer Advocate at HashiCorp</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
-    
     
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
@@ -17157,28 +17301,24 @@ mesheryctl system start"
       </div>
     </div>
     
-    
-    
     <div class="bq-section">
       <div class="type-one-wrapper type-one-wrapper-boxed">
-        <div class="bq-quote type-two-quote">
-          <div class="type-two-quote-pattern">
-            <div class="type-two-quote-qmark">&#10077;</div>
-          </div>
-          <div class="type-two-quote-userpic"><img src="/assets/images/people/anusha.webp" alt="testimonial image"></div>
-          <div class="type-two-quote-base">
-            <blockquote class="type-two-quote-text">Meshery has so many really amazing features all of which make DevOps and SRE life easy.</blockquote>
-            <div class="type-two-quote-meta">
-              <div class="type-two-quote-meta-info">
-                <div class="type-two-quote-author"><cite>Anusha Sridharan</cite></div>
-                <div class="type-two-quote-source"><span>Lead Software Engineer at Fidelity Investments</span></div>
+        <div class="bq-quote type-one-quote">
+          <div class="type-one-quote-userpic"><img src="/assets/images/people/anusha.webp" alt="testimonial image"></div>
+          <div class="type-one-quote-qmark">&#10077;</div>
+          <div class="type-one-quote-pattern"></div>
+          <div class="type-one-quote-base">
+            <blockquote class="type-one-quote-text">Meshery has so many really amazing features all of which make DevOps and SRE life easy.</blockquote>
+            <div class="type-one-quote-meta">
+              <div class="type-one-meta-info">
+                <div class="type-one-author"><cite>Anusha Sridharan</cite></div>
+                <div class="type-one-source"><span>Lead Software Engineer at Fidelity Investments</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
     
   </div>
 </div>
@@ -17194,7 +17334,7 @@ mesheryctl system start"
 			<span class="project-caption">
 				Created by
 				<a href="https://layer5.io" target="_blank" rel="noopener noreferrer">
-					<img id="l5-logo" src="/assets/images/company-logo/no-trim.svg"
+					<img id="l5-logo" class="logo-dark-light" src="/assets/images/company-logo/dark-mode-logo.svg" data-logo-for-dark="/assets/images/company-logo/dark-mode-logo.svg" data-logo-for-light="/assets/images/company-logo/no-trim.svg"
 						alt="Logo" />
 				</a>
 				and its open source community.
@@ -17292,7 +17432,7 @@ mesheryctl system start"
 						Internships</a></li>
 				
 				<li><a target="_blank" 
-						href="/community#discussion-forums
+						href="https://discuss.meshery.io
 " class="forum-icon" >
 						
 						
@@ -17588,18 +17728,23 @@ mesheryctl system start"
 	const currentMode = localStorage.getItem("mode");
 	if (isDark ^ (currentMode === "dark-mode")) {
 		setMode();
+	} else {
+		// Body already matches the stored theme, so setMode() is not called here.
+		// Sync every theme-aware logo to the current theme so logos that render
+		// after the header script (such as #l5-logo) show the correct image on
+		// load instead of waiting for a manual toggle.
+		document.querySelectorAll("#logo-dark-light, .logo-dark-light").forEach(e => {
+			e.src = document.body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
+		});
 	}
 
 	function setMode() {
 		document.body.classList.toggle("dark-mode")
 		
-		let l5Logos = document.querySelectorAll("#l5-logo");
-		let allLogos = document.querySelectorAll("#logo-dark-light");
+		let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
 		if (document.body.classList.contains("dark-mode")) {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/dark-mode-logo.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForDark)
 		} else {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/no-trim.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForLight)
 		}
 		if (document.body.classList.contains("dark-mode")) {
@@ -17619,7 +17764,8 @@ mesheryctl system start"
 <script>
   $(document).ready(function () {
     $('.slider').slick({
-
+      centerMode: true,
+      centerPadding: '0px',
       dots: false,
       arrows: false,
       infinite: true,
@@ -17634,25 +17780,25 @@ mesheryctl system start"
         {
           breakpoint: 1300,
           settings: {
-            slidesToShow: 2.5,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 1200,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 1.5,
+            slidesToShow: 2,
             slidesToScroll: 1,
           }
         },
@@ -17668,7 +17814,8 @@ mesheryctl system start"
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            centerMode: false
           }
         },
         {
@@ -17676,7 +17823,8 @@ mesheryctl system start"
           settings: {
             slidesToShow: 1,
             adaptiveWidth: true,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            centerMode: false
           }
         },
         {
@@ -17685,6 +17833,7 @@ mesheryctl system start"
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveWidth: true,
+            centerMode: false
           }
         },
         {
@@ -17693,6 +17842,7 @@ mesheryctl system start"
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveWidth: true,
+            centerMode: false
           }
         }
       ]

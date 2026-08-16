@@ -88,13 +88,13 @@
         if (localStorage.getItem("mode") === "light-mode") {
           body.classList.remove("dark-mode");
     
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => e.src = e.dataset.logoForLight);
         }
     
         // Automatically set logos based on initial theme
-        window.addEventListener('load', () => {
-          let allLogos = document.querySelectorAll("#logo-dark-light");
+        document.addEventListener('DOMContentLoaded', () => {
+          let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
           allLogos.forEach(e => {
             e.src = body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
           });
@@ -316,7 +316,7 @@
 						<div  class="sub-nav-li" >
 								<img class="nav-img" src="/assets/images/nav-icons/Discuss.svg
 ">
-							<a href="/community#discussion-forums
+							<a href="https://discuss.meshery.io
 " 
 							class="subnav-item">Discussion forums
 							
@@ -485,8 +485,6 @@
       </button>
     </div>
   </header>
-  </body>
-</html>
 
 
 <div class="content">
@@ -883,7 +881,7 @@ This command will update your meshconfig file to switch release channel and vers
 						Internships</a></li>
 				
 				<li><a target="_blank" 
-						href="/community#discussion-forums
+						href="https://discuss.meshery.io
 " class="forum-icon" >
 						
 						
@@ -1179,18 +1177,23 @@ This command will update your meshconfig file to switch release channel and vers
 	const currentMode = localStorage.getItem("mode");
 	if (isDark ^ (currentMode === "dark-mode")) {
 		setMode();
+	} else {
+		// Body already matches the stored theme, so setMode() is not called here.
+		// Sync every theme-aware logo to the current theme so logos that render
+		// after the header script (such as #l5-logo) show the correct image on
+		// load instead of waiting for a manual toggle.
+		document.querySelectorAll("#logo-dark-light, .logo-dark-light").forEach(e => {
+			e.src = document.body.classList.contains("dark-mode") ? e.dataset.logoForDark : e.dataset.logoForLight;
+		});
 	}
 
 	function setMode() {
 		document.body.classList.toggle("dark-mode")
 		
-		let l5Logos = document.querySelectorAll("#l5-logo");
-		let allLogos = document.querySelectorAll("#logo-dark-light");
+		let allLogos = document.querySelectorAll("#logo-dark-light, .logo-dark-light");
 		if (document.body.classList.contains("dark-mode")) {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/dark-mode-logo.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForDark)
 		} else {
-			l5Logos.forEach(e => e.src = '../assets/images/company-logo/no-trim.svg')
 			allLogos.forEach(e => e.src = e.dataset.logoForLight)
 		}
 		if (document.body.classList.contains("dark-mode")) {
@@ -1210,7 +1213,8 @@ This command will update your meshconfig file to switch release channel and vers
 <script>
   $(document).ready(function () {
     $('.slider').slick({
-
+      centerMode: true,
+      centerPadding: '0px',
       dots: false,
       arrows: false,
       infinite: true,
@@ -1225,25 +1229,25 @@ This command will update your meshconfig file to switch release channel and vers
         {
           breakpoint: 1300,
           settings: {
-            slidesToShow: 2.5,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 1200,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
           }
         },
         {
           breakpoint: 800,
           settings: {
-            slidesToShow: 1.5,
+            slidesToShow: 2,
             slidesToScroll: 1,
           }
         },
@@ -1259,7 +1263,8 @@ This command will update your meshconfig file to switch release channel and vers
           breakpoint: 480,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            centerMode: false
           }
         },
         {
@@ -1267,7 +1272,8 @@ This command will update your meshconfig file to switch release channel and vers
           settings: {
             slidesToShow: 1,
             adaptiveWidth: true,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            centerMode: false
           }
         },
         {
@@ -1276,6 +1282,7 @@ This command will update your meshconfig file to switch release channel and vers
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveWidth: true,
+            centerMode: false
           }
         },
         {
@@ -1284,6 +1291,7 @@ This command will update your meshconfig file to switch release channel and vers
             slidesToShow: 1,
             slidesToScroll: 1,
             adaptiveWidth: true,
+            centerMode: false
           }
         }
       ]
